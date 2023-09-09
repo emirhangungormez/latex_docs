@@ -1,0 +1,127 @@
+%\documentclass[mathtime]{qjmam}
+\documentclass{qjmam}
+\usepackage{amssymb}
+
+% If you do not have mathtime fonts please remove and use standard computer modern.
+
+\startpage{1}
+\yr{2023}
+\vol{1}
+\issue{1}
+
+\newtheorem{definition}{Definition}[section]
+\newtheorem{lemma}[definition]{Lemma}
+\newtheorem{Theorem}[definition]{Theorem}
+\newtheorem{proposition}[definition]{Proposition}
+\newtheorem{corollary}[definition]{Corollary}
+\newtheorem{remark}[definition]{Remark}
+\newtheorem{example}[definition]{Example}
+\newtheorem{algorithm}[definition]{Algorithm}
+
+%\newtheorem{lemma}{Lemma}
+%\newtheorem{example}{Example}
+%\newtheorem{proposition}{Proposition}
+
+\DeclareMathAlphabet\mathbit
+    \encodingdefault\rmdefault\bfdefault\itdefault
+\DeclareOldFontCommand{\bi}{\normalfont\bfseries\itshape}{\mathbit}
+
+
+\let\bdot\cdot
+\def\bdot{\mbox{\bi${\cdot}$}}
+
+
+\newcommand{\be}{\begin{equation}}
+\newcommand{\ee}{\end{equation}}
+\def \jt{\!\!\!\!\!&}
+\def\fakebold#1{\relax\ifvmode\leavevmode\fi%
+\ifmmode%
+\setbox0=\hbox{$#1$}%
+\else%
+\setbox0=\hbox{#1}%
+\fi%
+\kern-.02em\copy0 \kern-\wd0%
+\kern .04em\copy0 \kern-\wd0%
+\kern-.0125em\raise.02em\box0%
+}%
+\newcommand{\bmA}{\mbox{\fakebold{$A$}}}
+\newcommand{\bmB}{\mbox{\fakebold{$B$}}}
+\newcommand{\bmD}{\mbox{\fakebold{$D$}}}
+\newcommand{\bmH}{\mbox{\fakebold{$H$}}}
+\newcommand{\bme}{\mbox{\fakebold{$e$}}}
+\newcommand{\bmk}{\mbox{\fakebold{$k$}}}
+\newcommand{\bmx}{\mbox{\fakebold{$x$}}}
+\renewcommand{\.}{\raisebox{.9mm}{.}}
+\renewcommand{\geq}{\geqslant}
+\renewcommand{\leq}{\leqslant}
+%\rule[1mm]{2em}{.15mm}
+
+\begin{document}
+
+\title[{surface~tension~effects~in~a~wedge}] {SENATE BILDIRISI}
+
+
+\author[bıldırı] {Emirhan G.\and Baturalp G.}
+
+\extraauthor{(Genesis-Being-Existence)}
+
+\received{\textbf{9 Eylul 2023}}
+
+
+\maketitle
+
+\eqnobysec
+
+\begin{abstract} 
+
+\end{abstract}
+
+
+\section{Görev Tanımı}
+Hafta içerisinde gerçekleştirilecek toplantı nazarında hazırlanılmasını istediğimiz dokümanlar var. İlgili kişilerden; \textit{Proje1}, \textit{Proje2}... için ayrı dokümanlar hazırlanmalı. Doküman aşağıdaki başlıkları içermelidir. \\
+
+\textbf{Proje Başlığı ve Tanımı:} \\
+• Proje hedefleri ve amaçları \\
+• Projenin neden gerektiği \\
+• Projenin kapsamı ve sınırları \\
+
+\textbf{Proje Ekibi:}\\
+• İletişim bilgileri\\
+• Proje ekibinin organizasyon içindeki konumu (Ekol-içi aktif faaliyet yürüttükleri diğer alanlar)\\
+
+\textbf{Proje Planı:}\\
+• Proje başlangıç ve bitiş tarihleri (En önemlisi, net bir şekilde istiyoruz)\\
+• Ana milestone'lar ve bu milestone'lara ulaşma planı (Diğer önemli bir konu)\\
+• Çalışma paketleri ve görevler\\
+• Kaynak gereksinimleri (Yatırımcılardan talep edeceklerimiz)\\
+• Bütçe tahmini (Yatırımcılardan talep edeceklerimiz)\\
+• Riskler ve risk yönetimi planı (Finansal Projeksiyonu iyi dizayn etmelisiniz)\\
+
+\textbf{Proje İlerleme Durumu:}\\
+• Mevcut proje durumu (Halihazır durum ile ilgili ilerleme kaydı ve rapor)\\
+• Başarılan kilometre taşları (Projelerde neredeyiz?)\\
+• Gecikmeler veya sorunlar (Ekibin eleştirilerine yer veriniz)\\
+• Değişiklikler veya güncellemeler (Güncelleme tarihlerine mutlaka yer veriniz)\\
+
+\textbf{İletişim Planı:}\\
+• Proje ile ilgili iletişim kuralları ve protokoller (Tüm işi hangi platformda hangi ilkeler doğrultusunda yürütüyorsunuz?)\\
+• Toplantılar ve toplantıların düzenlendiği zamanlar (Ne sıklıkla toplantı oluyor? Ne kadar sürüyor? Toplantıların konusu ne oluyor, yalnızca bilgilendirme toplantıları mı yapılıyor yoksa çalışma toplantıları da düzenleniyor mu?)\\
+
+\textbf{Proje Başarı Kriterleri ve Ölçülebilirlik:}\\
+• Projenin başarısını değerlendirmek için kullanılacak ölçütler (Proje sizin için ne zaman başarılı olacak? Prototip çıktığında mı, yatırım aldığında mı?)\\
+Not: Yazacaklarınız başarı kriterlerinizin nasıl ölçüleceğini belirleyecektir.\\
+
+\textbf{Kaynaklar ve Referanslar:}\\
+• Proje ile ilgili kullanılan kaynaklar (Şuan da devops kültürü hakim mi? Ne tür teknolojiler kullanılıyor?)\\
+
+\textbf{Uygulama Tasarımı:}\\
+• Geliştirilen tasarım\\
+• Planlanan tasarım\\
+• Rakip proje tasarımları hakkında bilgi\\
+
+\textbf{Onay ve Imza:}\\
+• İlgili kişiler ile gizlilik anlaşması kabulü (Önemli)\\
+
+\textit{\textbf{Not}: Doküman tarihini 11.09.23 olarak belirleyiniz.}
+
+\end{document}
