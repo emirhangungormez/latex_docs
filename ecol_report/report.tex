@@ -1,0 +1,82 @@
+\documentclass[a4paper,12pt]{report}
+
+% Paketler
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage{geometry}
+\usepackage{setspace}
+\usepackage{graphicx}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{lipsum}
+
+% Sayfa düzeni
+\geometry{a4paper, top=2.5cm, bottom=2.5cm, left=2.5cm, right=2.5cm}
+
+% Başlık biçimi
+\titleformat{\chapter}[display]{\normalfont\bfseries\centering}{\chaptertitlename\ \thechapter}{10pt}{\large}
+
+% Sayfa numaraları
+\fancypagestyle{plain}{
+  \fancyhf{}
+  \fancyfoot[C]{\thepage}
+  \renewcommand{\headrulewidth}{0pt}
+}
+
+% Başlık, yazar ve tarih
+\title{Proje Raporu Başlığı}
+\author{Adınız Soyadınız}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+% İçindekiler
+\tableofcontents
+
+% Bölüm 1
+\chapter{Giriş}
+\section{Proje Tanımı}
+Bu bölümde projenizin genel tanımını yapabilirsiniz.
+
+\section{Amaç ve Hedefler}
+Projenizin amaçlarını ve hedeflerini belirtin.
+
+% Bölüm 2
+\chapter{Proje Planı}
+\section{Zaman Çizelgesi}
+Projenizin zaman çizelgesini burada sunun.
+
+\section{Kaynak Gereksinimleri}
+Proje için gerekli kaynakları ve bütçeyi açıklayın.
+
+% Bölüm 3
+\chapter{Proje İlerlemesi}
+\section{Mevcut Durum}
+Projenin şu anki durumu hakkında bilgi verin.
+
+\section{Başarılar ve Sorunlar}
+Projenin başarılarını ve karşılaşılan sorunları tartışın.
+
+% Bölüm 4
+\chapter{Sonuçlar ve Öneriler}
+\section{Sonuçlar}
+Projenin sonuçlarına dair bilgi sunun.
+
+\section{Öneriler}
+Proje ile ilgili önerilerinizi paylaşın.
+
+% Ekler
+\appendix
+\chapter{Ekler}
+Bu bölümde ek materyalleri ekleyebilirsiniz.
+
+% Kaynaklar
+\begin{thebibliography}{9}
+\bibitem{example-ref} Örnek bir referans
+Bu, bir örnek referanstır.
+\end{thebibliography}
+
+\end{document}
