@@ -1,0 +1,80 @@
+\documentclass{article}
+\usepackage{lipsum} % Rastgele metin eklemek için
+\usepackage{graphicx} % Grafikler için
+\usepackage{cite} % Kaynakçaları düzenlemek için
+\usepackage{amsmath} % Matematiksel semboller için
+\usepackage{hyperref} % Hyperlinkler için
+\usepackage{fancyhdr} % Sayfa düzeni için
+
+\title{LateX Kullanımı}
+\author{\textit{Emirhan} G and \textit{Baturalp} G.}
+\date{\today}
+
+% Sayfa altbilgisi için fancyhdr ayarları
+\pagestyle{fancy}
+\fancyhf{} % Mevcut sayfa düzenini temizle
+\renewcommand{\headrulewidth}{0pt} % Sayfa üstbilgisinin çizgisini kaldırır
+\rfoot{Senate Bildirisi - Anticverse} % Sağ alt köşede görünecek notu belirtin
+
+\begin{document}
+
+\maketitle
+
+\renewcommand{\abstractname}{Özet} % abstract başlığını siler
+\begin{abstract}
+Anticverse içi birimlerde, genel bildiriler için \date{\today} tarihinden itibaren \LaTeX{} kullanımı şart koşulmuştur.
+\end{abstract}
+
+\section{LaTeX Nedir?}
+LaTeX (telaffuz: "lay-tek" veya "lah-tek"), profesyonel kalitede belgeler ve dokümanlar oluşturmak için kullanılan bir metin düzenleme sistemi ve belge hazırlama yazılımıdır. LaTeX, özellikle akademik makaleler, tezler, kitaplar, bilimsel raporlar, sunumlar ve teknik belgeler gibi karmaşık belgelerin oluşturulması için yaygın olarak kullanılır.
+
+\section{Neden LaTeX?}
+\textbf{Belge Yapısı:} LaTeX, belgeleri başlık, bölüm, alt bölüm, tablo ve şekiller gibi yapılandırılmış bir şekilde oluşturmanıza olanak tanır. Bu, belgelerinizi organize etmek ve profesyonel bir görünüm elde etmek için çok uygundur.\\
+
+\textbf{Dizgi Kalitesi:} LaTeX, yüksek kaliteli tipografi sağlar. Otomatik olarak sayfa düzenini ve metin biçimini ayarlar, böylece belgeleriniz estetik açıdan çekici ve okunabilir olur.\\
+
+\textbf{Formüller ve Matematiksel İfadeler:} LaTeX, matematiksel ifadelerin ve formüllerin oluşturulması için güçlü bir sistem sunar. Bu özellik, bilimsel ve teknik belgeler için çok önemlidir.\\
+
+\textbf{Referans Yönetimi:} LaTeX, kaynakların düzenlenmesi ve atıf yapmak için kolaylık sağlayan bir sistem sunar. Bu, akademik makalelerde ve tezlerde çok işlevseldir.\\
+
+\textbf{Taşınabilirlik:} LaTeX, Windows, macOS ve Linux gibi farklı işletim sistemlerinde kullanılabilir ve belgeleriniz taşınabilirdir. LaTeX dosyaları metin tabanlıdır ve hemen hemen her metin düzenleme yazılımıyla düzenlenebilir.\\
+
+\textbf{Ücretsiz ve Açık Kaynaklı:} LaTeX, ücretsizdir ve açık kaynaklıdır. Bu, herkesin kullanabileceği ve gerektiğinde özelleştirebileceği anlamına gelir.\\
+
+\textit{LaTeX, belge hazırlama işlemlerini otomatikleştiren ve sonuç olarak profesyonel ve tutarlı dokümanlar üreten güçlü bir araçtır. Özellikle akademik dünyada ve teknik alanlarda sıkça kullanılır. Başlangıçta öğrenmesi biraz zaman alabilir, ancak profesyonel ve karmaşık belgeler oluşturmak için sağladığı avantajlar genellikle bu çabayı haklı çıkarır.}
+
+
+\section{Nasıl Kullanılır?}
+Overleaf gibi çevrimiçi LaTeX düzenleyicileri, LaTeX'i indirmenize veya yerel bir LaTeX düzenleyici kurmanıza gerek kalmadan LaTeX belge oluşturmanıza olanak tanır. Hem ücretsiz hem de kullanımı kolaydır ve herhangi bir cihaz ve tarayıcı üzerinden erişilebilir.
+
+\textbf{Overleaf'e Erişin:} Web tarayıcınızı kullanarak Overleaf web sitesini ziyaret edin.\\
+
+\textbf{Hesap Oluşturun veya Giriş Yapın:} Bir Overleaf hesabınız yoksa, hesap oluşturun. Var olan bir hesabınız varsa giriş yapın.\\
+
+\textbf{Proje Oluşturun:} Hesabınıza giriş yaptıktan sonra, yeni bir proje oluşturun. Projenize bir ad verin.\\
+
+\textbf{Şablonu Yükleyin:} Projeyi oluşturduktan sonra, şablonumuzdaki LaTeX kodunu proje dosyasına yapıştırın.\\
+
+\textbf{Belgeyi Derleyin:} Proje dosyanızı açın ve Overleaf üzerindeki "Derle" veya "PDF Oluştur" düğmesini tıklayarak LaTeX belgenizi derleyin.\\
+
+\textbf{PDF'i İndirin:} Derleme işlemi tamamlandığında, sağ üst köşede bir "PDF" düğmesi görünecektir. Bu düğmeye tıklayarak PDF dosyasını indirebilirsiniz.\\
+
+\section{Şablonlara Nerede?}
+Şablonlara Overleaf üzerinden ulaşabilirsiniz. Ancak salt ve sade şablonlar için:\\
+\url{https://github.com/emirhangungormez/latex_docs} adresine gidebilirsiniz.
+
+\section{Sonuç}
+\textbf{Tüm Ekol Raporlamaları, Ekol Faaliyetleri, Önemli Ekol Bildirimleri, Anticverse Sözleşmeleri, Önemli Anticverse Belgeleri LaTeX ile hazırlanacaktır. }\textit{(Anticverse Üye Bildirisi İstisna)}
+
+\section*{Öneri}
+Önerilerinizi Senate'e ClickUp ve AnticMail üzerinden iletebilirsiniz.\\
+\\
+Emirhan Güngörmez\\
+\texttt{gungormez.emirhan@anticverse.com} \\
+Baturalp Güvenç\\
+\texttt{guvenc.baturalp@anticverse.com}
+
+\bibliographystyle{plain}
+\bibliography{referanslar} % Referanslarınızı ayrı bir .bib dosyasında tutabilirsiniz.
+
+\end{document}
