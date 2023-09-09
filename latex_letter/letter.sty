@@ -1,0 +1,103 @@
+%% Written by DFL, Ifi, UiO
+
+\def\fileversion{1.04}
+\def\filedate{13/12/13}
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{uiofont}[\filedate\space\fileversion\space
+   LaTeX2e font package for official UiO font]
+
+% Other packages
+% --------------
+\RequirePackage{ifthen}
+
+% Options
+% -------
+% verdana: I know the official sans serif font is Arial, but I still
+%          think Verdana would have been a better
+%          choice. Consequently, I provide this package with an option
+%          named 'verdana' which will choose that font (if
+%          available). 
+
+\newboolean{uioverdana}\setboolean{uioverdana}{false}
+\DeclareOption{verdana}{\setboolean{uioverdana}{true}}
+
+\ProcessOptions \relax
+
+% Math font
+% ---------
+% No official math font has been specified, either, but since Georgia
+% has similarities with Utopia, the Fourier font may be used.
+% Omit all the font warnings.
+
+\let \uio@font@warning = \@font@warning
+\renewcommand{\@font@warning}[1]{}% Ignore any warnings!
+\IfFileExists{fourier.sty}{\RequirePackage{fourier}}{}
+\let \@font@warning = \uio@font@warning
+
+
+% Main text font
+% --------------
+% The official font is Georgia, but it may not be available in all
+% LaTeX installations.
+
+\newcounter{uio@temp}
+
+% Computer Modern is always available:
+\setcounter{uio@temp}{0}
+
+% New Century Schoolbook is a good substitute for Georgia:
+\IfFileExists{t1pnc.fd}{\setcounter{uio@temp}{1}}{}
+
+% But it should really be Geogia:
+\IfFileExists{t1jgi.fd}{\setcounter{uio@temp}{2}}{}
+
+\ifcase \theuio@temp \renewcommand{\rmdefault}{cmr}  
+\or \renewcommand{\rmdefault}{pnc}
+\or \renewcommand{\rmdefault}{jgi}
+\fi
+
+% Sans serif font
+% ---------------
+% The official sans serif font is Arial, but, again, this may not
+% always be available.
+
+% Computer Modern Sans Serif is always there:
+\setcounter{uio@temp}{0}
+
+% A reasonably good substitute font is Helvetica:
+\IfFileExists{t1phv.fd}{\setcounter{uio@temp}{1}}{}
+
+% But the official font is still Arial:
+\IfFileExists{t1ua1.fd}{\setcounter{uio@temp}{2}}{}
+
+% However, the user's prefererence is more important:
+\ifthenelse{\boolean{uioverdana}}
+  {\IfFileExists{t1jvn.fd}{\setcounter{uio@temp}{3}}{}}
+  {}
+
+\ifcase \theuio@temp \renewcommand{\sfdefault}{cmss}
+\or \RequirePackage[scaled]{helvet} % To blend well, Helvetica should be scaled to 95%.
+\or \renewcommand{\sfdefault}{ua1}
+\or \renewcommand{\sfdefault}{jvn}
+\fi
+
+% Teletype font
+% -------------
+% No official teletype font has been defined, but I think Lucida
+% Typewriter works well with Georgia and Arial (and Verdana).
+
+% Computer Modern Typewriter is always there:
+\setcounter{uio@temp}{0}
+
+% Courier is a moderately successful substitute:
+\IfFileExists{t1pcr.fd}{\setcounter{uio@temp}{1}}{}
+
+% But Lucida Typewriter is better (in my opinion):
+\IfFileExists{lbtr.pfb}{\setcounter{uio@temp}{2}}{}
+
+\ifcase \theuio@temp \renewcommand{\ttdefault}{cmtt}
+\or \renewcommand{\ttdefault}{pcr}
+\or \renewcommand{\ttdefault}{hlct}
+\fi
+
+\endinput
